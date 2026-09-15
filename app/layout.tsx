@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+// Export the client-only finance app as static files for GitHub Pages.
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "เงินดี — ผู้ช่วยดูแลบัญชีส่วนบุคคล",
   description: "จัดการรายรับ รายจ่าย งบประมาณ หนี้ เงินออม การลงทุน และภาษีในที่เดียว",
