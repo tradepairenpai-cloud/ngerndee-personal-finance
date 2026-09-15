@@ -1,0 +1,13 @@
+{
+  "name": "NgernDee",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "เงินดี",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "npm ci",
+  "postStartCommand": "npm run dev -- --hostname 0.0.0.0"
+}
