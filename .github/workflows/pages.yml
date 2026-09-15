@@ -24,7 +24,7 @@ jobs:
         run: cp next.github.config.ts next.config.ts
       - name: Use GitHub Pages manifest
         run: cp public/github.webmanifest public/app.webmanifest
-      - run: npm run build
+      - run: npm run build -- --prerender-all
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
