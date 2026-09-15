@@ -25,6 +25,11 @@ jobs:
       - name: Use GitHub Pages manifest
         run: cp public/github.webmanifest public/app.webmanifest
       - run: npm run build -- --prerender-all
+      - name: Place prefixed assets at the Pages artifact root
+        run: |
+          if [ -d dist/client/ngerndee-personal-finance ]; then
+            cp -R dist/client/ngerndee-personal-finance/. dist/client/
+          fi
       - name: Allow GitHub Pages to serve app assets
         run: touch dist/client/.nojekyll
       - uses: actions/configure-pages@v5
